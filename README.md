@@ -12,6 +12,7 @@ To demonstrate the reproducibility and generalizability of our methodology, this
 - `cognition/`: The "Brain". Handles VLM inference (prompting and parsing) and the deterministic state-machine logic for process control.
 - `actuation/`: The "Hand". Abstracted robotic control interface for executing physical actions (e.g., button pressing).
 - `main_closed_loop.py`: The entry point that runs the continuous Cyber-Physical feedback loop.
+- `UR_URPs`: The Urp files for UR5e (Unified Action Primitive Library).
 
 ## Requirements
 ```bash
