@@ -1,0 +1,18 @@
+# System Configuration for Cognitive Loop
+
+task_settings:
+  target_temperature: 150.0  # Celsius
+  tolerance: 1.0             # Acceptable temperature fluctuation range
+  loop_interval_sec: 4.1     # Latency of one cycle (as reported in paper)
+
+perception_settings:
+  # Region of Interest (ROI) for the electronic display [x, y, width, height]
+  roi_coordinates: [320, 240, 200, 80]
+  apply_contrast_norm: true
+  
+vlm_settings:
+  model_name: "Qwen/Qwen3-VL-8B"
+  prompt_template: >
+    You are an expert laboratory assistant. Read the numerical temperature value 
+    displayed on this heat press controller screen. 
+    Output only the number. If you cannot read it clearly, output 'UNKNOWN'.
